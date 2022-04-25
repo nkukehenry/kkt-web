@@ -189,6 +189,16 @@ function timeago($timestamp)
 }
 
 
+if (!function_exists('recent_news')) {
+  function recent_news(){
+
+      $ci =& get_instance();
+      $ci->load->model('Model_news');
+      return $ci->Model_news->fetch_news(3, 0);
+  }
+
+}
+
 
 
 ?>

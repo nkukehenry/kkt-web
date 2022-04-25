@@ -530,11 +530,11 @@ $success_message = '';
                             <li class="menu-item-has-children"><a href="javascript:void;" class="chl"><?php echo PAGE; ?></a>
                                 <ul>
                                     <?php if($arr_menu[4] == 'Show'): ?>
-                                    <li><a href="<?php echo base_url(); ?>event"><?php echo EVENT; ?></a></li>
+                                    <li class="hidden"><a href="<?php echo base_url(); ?>event"><?php echo EVENT; ?></a></li>
                                     <?php endif; ?>
 
                                     <?php if($arr_menu[5] == 'Show'): ?>
-                                    <li><a href="<?php echo base_url(); ?>photo-gallery"><?php echo PHOTO_GALLERY; ?></a></li>
+                                    <li class="hidden"><a href="<?php echo base_url(); ?>photo-gallery"><?php echo PHOTO_GALLERY; ?></a></li>
                                     <?php endif; ?>
                                     
                                     <?php if($arr_menu[6] == 'Show'): ?>
@@ -546,7 +546,7 @@ $success_message = '';
                                     <?php endif; ?>
 
                                     <?php if($arr_menu[8] == 'Show'): ?>
-                                    <li><a href="<?php echo base_url(); ?>pricing"><?php echo PRICING_TABLE; ?></a></li>
+                                    <li class="hidden"><a href="<?php echo base_url(); ?>pricing"><?php echo PRICING_TABLE; ?></a></li>
                                     <?php endif; ?>
 
                                     <?php if($d_page == 1): ?>

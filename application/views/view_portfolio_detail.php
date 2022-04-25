@@ -1,16 +1,30 @@
-<!--Banner Start-->
-<div class="banner-slider" style="background-image: url(<?php echo base_url(); ?>public/uploads/<?php echo $setting['banner_portfolio']; ?>)">
-    <div class="bg"></div>
-    <div class="bannder-table">
-        <div class="banner-text">
-            <h1><?php echo $portfolio['name']; ?></h1>
+
+ <!-- ##### Welcome Area Start ##### -->
+    <div class="breadcumb-area clearfix auto-init" 
+    style="background: url(<?php echo base_url(); ?>public/uploads/<?php echo $setting['banner_portfolio']; ?>) no-repeat center top;">
+        
+        <!-- breadcumb content -->
+        <div class="breadcumb-content">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb" class="breadcumb--con text-center">
+                            <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s"><?php echo $portfolio['name']; ?></h2>
+                            <ol class="breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+                                <li class="breadcrumb-item"><a href="<?=base_url()?>">Home</a></li>
+                                <li class="breadcrumb-item"><a href="<?=base_url()?>portfolio">Portfolio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo $portfolio['name']; ?></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<!--Banner End-->
+
 
 <!--Portfolio-Details Start-->
-<div class="portfolio-details pt_60 pb_90">
+  <section class="blog-area section-padding-100-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -35,6 +49,7 @@
                 <div class="portfolio-details-text">
                     <h3><?php echo PROJECT_OVERVIEW; ?></h3>
                     <?php echo $portfolio['content']; ?>
+                    <br>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -49,46 +64,7 @@
                             <li><span><?php echo CLIENT_COMMENT; ?>:<br></span><?php echo $portfolio['client_comment']; ?></li>
                         </ul>
                     </div>
-                    <div class="portfolio-form headstyle mt-30">
-                        <h4><?php echo SIDEBAR_PORTFOLIO_HEADING_2; ?></h4>
-                        <?php echo form_open(base_url().'portfolio/send_email',array('class' => '')); ?>
-                            <div class="form-row">
-                                <input type="hidden" name="portfolio" value="<?php echo $portfolio['name']; ?>">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="<?php echo NAME; ?>" name="name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="<?php echo EMAIL_ADDRESS; ?>" name="email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="phone" class="form-control" placeholder="<?php echo PHONE_NUMBER; ?>" name="phone">
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="<?php echo MESSAGE; ?>" name="message"></textarea>
-                                </div>
-                                <?php if($check_captcha['captcha_portfolio_detail'] == 'Show'): ?>
-                                <div class="form-group col-12">
-                                    <?php
-                                    $CI =& get_instance();
-                                    $CI->load->model('Model_portfolio');
-                                    $r_serial = mt_rand(1, $total_captcha);
-                                    $captcha_one = $CI->Model_portfolio->get_particular_captcha($r_serial);
-                                    ?>
-                                    <div class="captcha-section-1">
-                                        <?php echo $captcha_one['captcha_value1'].' '.$captcha_one['captcha_symbol'].' '.$captcha_one['captcha_value2'].' = ' ?>
-                                    </div>
-                                    <div class="captcha-section-2">
-                                        <input type="hidden" name="r_serial" value="<?php echo $r_serial; ?>">
-                                        <input type="text" class="form-control w-60" name="captcha_input">
-                                    </div>
-                                </div>
-                                <?php endif; ?>
-                                <div class="form-button">
-                                    <button type="submit" class="btn" name="form_portfolio"><?php echo SUBMIT; ?></button>
-                                </div>
-                            </div>
-                        <?php echo form_close(); ?>
-                    </div>
+                    <div class="row mt-5"></div>
                 </div>
             </div>
         </div>
@@ -137,5 +113,5 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <!--Recent Project End-->

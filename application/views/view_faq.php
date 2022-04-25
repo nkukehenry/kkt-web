@@ -13,6 +13,8 @@
 <div class="faq-area faq-main-page pt_60 pb_90">
     <div class="container">
         <div class="row">
+            <blockquote><h4>Here we answer the commonest questions we are asked.</h4></blockquote>
+            <hr>
             <div class="col-12">
                 <div class="faq-group headstyle mt-30">
                     <div id="accordion">

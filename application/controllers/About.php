@@ -16,6 +16,7 @@ class About extends MY_Controller {
 		$data['comment'] = $this->Model_common->all_comment();
 		$data['social'] = $this->Model_common->all_social();
 		$data['all_news'] = $this->Model_common->all_news();
+		$data['portfolio_order_by_name'] = $this->Model_portfolio->get_portfolio_data_order_by_name();
 
 		$data['portfolio_footer'] = $this->Model_portfolio->get_portfolio_data();
 

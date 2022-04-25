@@ -13,7 +13,7 @@
                     <div class="col-12 col-lg-6 col-md-12">
                         <div class="welcome-content">
                             <div class="promo-section">
-                                <h3 class="special-head"><?=$slider->heading?></h3>
+                                <h3 class="special-head" ><?=$slider->heading?></h3>
                             </div>
                             <h1 class="w-text bolder fadeInUp" data-wow-delay="0.2s">
                                 <?=$slider->sub_heading?>   
@@ -70,18 +70,18 @@
                         <div class="row">
 
                             <?php 
-                                foreach ($portfolio as $portif):
-                                    $portif = (Object) $portif;
+                                foreach ($keyareas as $keyarea):
+                                    $keyarea = (Object) $keyarea;
                              ?>
-                                <div class="col-sm-12 ">
+                                <div class="col-sm-12 " data-wow-delay="0.5s">
                                     <div class="services-block-four">
                                         <div class="inner-box">
                                             <div class="icon-img-box hot-box">
-                                                <img src="<?php echo base_url(); ?>public/uploads/<?php echo $portif->photo; ?>" alt="">
+                                                <img src="<?php echo base_url(); ?>public/uploads/<?php echo $keyarea->photo; ?>" alt="">
                                             </div>
-                                            <h3 class="fadeInUp" data-wow-delay="0.8s"><a href="#"><?=$portif->name?></a></h3>
+                                            <h3 class="fadeInUp" data-wow-delay="0.8s"><a href="#"><?=$keyarea->name?></a></h3>
                                             <div class="text fadeInUp" data-wow-delay="1s">
-                                                <?=nl2br($portif->short_content)?>
+                                                <?=nl2br($keyarea->short_content)?>
                                             </div>
                                             
                                         </div>
@@ -118,7 +118,7 @@
                     
                 <div class="col-12 col-md-6 col-lg-3">
                     <!-- Content -->
-                    <div class="service_single_content box-shadow text-center wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service_single_content box-shadow text-center wow fadeInUp" data-wow-delay="0.5s">
                         <!-- Icon -->
                         <div class="how_icon">
                             <img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="colored-icon" alt="">
@@ -137,90 +137,72 @@
 
 
 
-<?php
-
-    /*
-
-    <!-- ##### About Us Area Start ##### -->
-    <section class="about-us-area section-padding-100">
-        
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6 offset-lg-0 col-md-12">
-                    <div class="fadeInUp" data-wow-delay="0.7s">
-                        <img src="<?=base_url('public/front/img/core-img/about1.png')?>" alt="">
-                    </div>
+<!--Portfolio Start-->
+<?php if($page_home_lang_independent['home_portfolio_status'] == 'Show'): ?>
+<div class="portfolio-area pt_90 pb_90">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="headline" data-wow-delay="0.5s">
+                    <h2><?php echo $page_home['home_portfolio_title']; ?></h2>
+                    <h3><?php echo $page_home['home_portfolio_subtitle']; ?></h3>
                 </div>
-                
-                <div class="col-12 col-lg-6 offset-lg-0">
-                    <div class="who-we-contant mt-s">
-                        <div class="more-dots text-left fadeInUp" data-wow-delay="0.2s">
-                            <span class="">Logistics & Transportation Company</span>
-                        </div>
-                        <h4 class="bold fadeInUp" data-wow-delay="0.3s">We are the most popular Logistics and Transportation company.</h4>
-                        <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. sit amet convallis nunc scelerisque in. ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. sit amet convallis nunc scelerisque in.</p>
-                        <div class="list-wrap align-items-center">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="side-feature-list-item">
-                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                        <div class="foot-c-info">Custom & new Solutions</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="side-feature-list-item">
-                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                        <div class="foot-c-info">24/7 Support services</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="side-feature-list-item">
-                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                        <div class="foot-c-info">Dedicated Team </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="side-feature-list-item">
-                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                        <div class="foot-c-info">Latest Technologies</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="side-feature-list-item">
-                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                        <div class="foot-c-info">The best Quality Ever</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="side-feature-list-item">
-                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                        <div class="foot-c-info">unlimited opportunities</div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <a class="btn-paint mt-30 fadeInUp" data-wow-delay="0.6s" href="about-us.html">Read More</a>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
-    <!-- ##### About Us Area End ##### -->
+        <div class="row">
+            <div class="col-12">
+                <div class="portfolio-menu">
+                    <ul id="filtrnav">
+                        <li class="filtr filtr-active" data-filter="all"><?php echo ALL; ?></li>
+                        <?php
+                        foreach ($portfolio_category as $row) {
+                            ?>
+                            <li class="filtr" data-filter="<?php echo $row['category_id']; ?>"><?php echo $row['category_name']; ?></li>
+                            <?php
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row filtr-container">            
+            <?php
+            foreach ($portfolio as $row) {
+                ?>
+                <div class="col-lg-4 col-md-6 filtr-item " data-wow-delay="0.2s" data-category="<?php echo $row['category_id']; ?>" data-sort="Menu">
+                    <div class="portfolio-group">
+                        <div class="portfolio-photo" style="background-image: url(<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>)">
+                            <div class="portfolio-bg"></div>
+                            <div class="portfolio-table">
+                                <div class="portfolio-icon">
+                                    <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-text">
+                            <h3><a href="<?php echo base_url(); ?>portfolio/view/<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h3>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<!--Portfolio End-->
 
-    */
-
-    ?>
-
+<!--Services Start-->
+<?php if($page_home_lang_independent['home_service_status'] == 'Show'): ?>
     <!-- ##### Our Services Area Start ##### -->
     <section class="our_services_area section-padding-100-0 relative map-bg map-before">
         <div class="container">
             
             <div class="section-heading text-center">
                 
-                <h2 class="d-blue bold fadeInUp" data-wow-delay="0.3s"> <?php echo $page_home['home_service_title']; ?> </h2>
-                <p class=" fadeInUp" data-wow-delay="0.4s"><?php echo $page_home['home_service_subtitle']; ?></p>
+                <h2 class="d-blue bold fadeInUp" data-wow-delay="0.5s"> <?php echo $page_home['home_service_title']; ?> </h2>
+                <p class=" fadeInUp" data-wow-delay="0.6s"><?php echo $page_home['home_service_subtitle']; ?></p>
             </div>
                 
 
@@ -246,6 +228,8 @@
         </div>
     </section>
 
+<?php endif; ?>
+
 <?php if($page_home_lang_independent['home_team_status'] == 'Show'): ?>
     <!-- ##### Team Area Start ##### -->
     <section class="our_team_area section-padding-100-0 clearfix" id="team">
@@ -254,8 +238,8 @@
                 <div class="col-12">
                     <div class="section-heading text-center">
                         
-                        <h2 class="fadeInUp" data-wow-delay="0.3s"><?php echo $page_home['home_team_title']; ?></h2>
-                        <p class="fadeInUp" data-wow-delay="0.4s"><?php echo $page_home['home_team_subtitle']; ?> </p>
+                        <h2 class="fadeInUp" data-wow-delay="0.7s"><?php echo $page_home['home_team_title']; ?></h2>
+                        <p class="fadeInUp" data-wow-delay="0.8s"><?php echo $page_home['home_team_subtitle']; ?> </p>
                     </div>
                 </div>
             </div>
@@ -291,7 +275,7 @@
     <!-- ##### Team Area End ##### -->
 <?php endif; ?>
 
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
 
 <!--Blog-Area Start-->
 <?php if($page_home_lang_independent['home_blog_status'] == 'Show'): ?>
@@ -346,6 +330,34 @@
         </div>
     </section>
 
-<?php endif; ?>    
+<?php endif;   
+
+
+if(count($clients)>0): ?>
+<!--Brand-Area Start-->
+<div class="brand-area bg-area pt_90 pb_90">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="brand-carousel owl-carousel">
+                    <?php
+                    foreach($clients as $row) {
+                        ?>
+                        <?php if($row['url']!=''): ?>
+                            <div class="brand-item"><a href="<?php echo $row['url']; ?>"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>"></a></div>
+                        <?php else: ?>
+                            <div class="brand-item"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>"></div>
+                        <?php endif; ?>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Brand-Area End--> 
+
+<?php endif; ?> 
   
 

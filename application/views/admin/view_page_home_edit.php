@@ -79,7 +79,7 @@ if(!$this->session->userdata('id')) {
                                 <textarea class="form-control editor" name="home_welcome_text"><?php echo $page_home['home_welcome_text']; ?></textarea>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Progress Bar 1 - Text </label>
                             <div class="col-sm-4">
                                 <input type="text" name="home_welcome_pbar1_text" class="form-control" value="<?php echo $page_home['home_welcome_pbar1_text']; ?>">
@@ -89,7 +89,7 @@ if(!$this->session->userdata('id')) {
                                 <input type="text" name="home_welcome_pbar1_value" class="form-control" value="<?php echo $page_home['home_welcome_pbar1_value']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Progress Bar 2 - Text </label>
                             <div class="col-sm-4">
                                 <input type="text" name="home_welcome_pbar2_text" class="form-control" value="<?php echo $page_home['home_welcome_pbar2_text']; ?>">
@@ -99,7 +99,7 @@ if(!$this->session->userdata('id')) {
                                 <input type="text" name="home_welcome_pbar2_value" class="form-control" value="<?php echo $page_home['home_welcome_pbar2_value']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Progress Bar 3 - Text </label>
                             <div class="col-sm-4">
                                 <input type="text" name="home_welcome_pbar3_text" class="form-control" value="<?php echo $page_home['home_welcome_pbar3_text']; ?>">
@@ -109,7 +109,7 @@ if(!$this->session->userdata('id')) {
                                 <input type="text" name="home_welcome_pbar3_value" class="form-control" value="<?php echo $page_home['home_welcome_pbar3_value']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Progress Bar 4 - Text </label>
                             <div class="col-sm-4">
                                 <input type="text" name="home_welcome_pbar4_text" class="form-control" value="<?php echo $page_home['home_welcome_pbar4_text']; ?>">
@@ -119,7 +119,7 @@ if(!$this->session->userdata('id')) {
                                 <input type="text" name="home_welcome_pbar4_value" class="form-control" value="<?php echo $page_home['home_welcome_pbar4_value']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Progress Bar 5 - Text </label>
                             <div class="col-sm-4">
                                 <input type="text" name="home_welcome_pbar5_text" class="form-control" value="<?php echo $page_home['home_welcome_pbar5_text']; ?>">
@@ -130,14 +130,14 @@ if(!$this->session->userdata('id')) {
                             </div>
                         </div>
 
-                        <h3 class="sec_title">Why Choose Us Section</h3>
-                        <div class="form-group">
+                        <h3 class="sec_title hidden">Why Choose Us Section</h3>
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Title </label>
                             <div class="col-sm-9">
                                 <input type="text" autocomplete="off" class="form-control" name="home_why_choose_title" value="<?php echo $page_home['home_why_choose_title']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Subtitle </label>
                             <div class="col-sm-9">
                                 <input type="text" autocomplete="off" class="form-control" name="home_why_choose_subtitle" value="<?php echo $page_home['home_why_choose_subtitle']; ?>">
@@ -172,8 +172,8 @@ if(!$this->session->userdata('id')) {
                             </div>
                         </div>
 
-                        <h3 class="sec_title">Counter Information Section</h3>
-                        <div class="form-group">
+                        <h3 class="sec_title hidden">Counter Information Section</h3>
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Item 1 - Title </label>
                             <div class="col-sm-2">
                                 <input type="text" name="counter_1_title" class="form-control" value="<?php echo $page_home['counter_1_title']; ?>">
@@ -187,7 +187,7 @@ if(!$this->session->userdata('id')) {
                                 <input type="text" name="counter_1_icon" class="form-control" value="<?php echo $page_home['counter_1_icon']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Item 2 - Title </label>
                             <div class="col-sm-2">
                                 <input type="text" name="counter_2_title" class="form-control" value="<?php echo $page_home['counter_2_title']; ?>">
@@ -201,7 +201,7 @@ if(!$this->session->userdata('id')) {
                                 <input type="text" name="counter_2_icon" class="form-control" value="<?php echo $page_home['counter_2_icon']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Item 3 - Title </label>
                             <div class="col-sm-2">
                                 <input type="text" name="counter_3_title" class="form-control" value="<?php echo $page_home['counter_3_title']; ?>">
@@ -215,7 +215,7 @@ if(!$this->session->userdata('id')) {
                                 <input type="text" name="counter_3_icon" class="form-control" value="<?php echo $page_home['counter_3_icon']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Item 4 - Title </label>
                             <div class="col-sm-2">
                                 <input type="text" name="counter_4_title" class="form-control" value="<?php echo $page_home['counter_4_title']; ?>">
@@ -245,8 +245,8 @@ if(!$this->session->userdata('id')) {
                         </div>
 
 
-                        <h3 class="sec_title">Booking Section</h3>
-                        <div class="form-group">
+                        <h3 class="sec_title hidden">Booking Section</h3>
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Booking Form Title </label>
                             <div class="col-sm-9">
                                 <input type="text" autocomplete="off" class="form-control" name="home_booking_form_title" value="<?php echo $page_home['home_booking_form_title']; ?>">
@@ -275,14 +275,14 @@ if(!$this->session->userdata('id')) {
                         </div>
 
 
-                        <h3 class="sec_title">Pricing Table Section</h3>
-                        <div class="form-group">
+                        <h3 class="sec_title hidden">Pricing Table Section</h3>
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Title </label>
                             <div class="col-sm-9">
                                 <input type="text" autocomplete="off" class="form-control" name="home_ptable_title" value="<?php echo $page_home['home_ptable_title']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="" class="col-sm-2 control-label">Subtitle </label>
                             <div class="col-sm-9">
                                 <input type="text" autocomplete="off" class="form-control" name="home_ptable_subtitle" value="<?php echo $page_home['home_ptable_subtitle']; ?>">
@@ -305,7 +305,7 @@ if(!$this->session->userdata('id')) {
                         </div>
 
 
-                        <h3 class="sec_title">Blog Section</h3>
+                        <h3 class="sec_title">News Section</h3>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">Title </label>
                             <div class="col-sm-9">

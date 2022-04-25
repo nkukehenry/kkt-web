@@ -96,7 +96,13 @@
                             </div>
 
                             <?php if($check_captcha['captcha_contact'] == 'Show'): ?>
+
+                                <div class="form-group col-12">
+                                    <label>Prove you're human</label>
+                                </div>
+
                             <div class="form-group col-12">
+
                                 <?php
                                 $CI =& get_instance();
                                 $CI->load->model('Model_contact');
@@ -108,7 +114,7 @@
                                 </div>
                                 <div class="captcha-section-2">
                                     <input type="hidden" name="r_serial" value="<?php echo $r_serial; ?>">
-                                    <input type="text" class="form-control w-60" name="captcha_input">
+                                    <input type="text" class="form-control w-60" name="captcha_input" required>
                                 </div>
                             </div>
                             <?php endif; ?>

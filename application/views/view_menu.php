@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="banner">
         <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand" href="#"><span>
+            <a class="navbar-brand" href="<?php echo base_url(); ?>"><span>
                 <img src="<?php echo base_url(); ?>public/uploads/<?php echo $setting['logo']; ?>" alt="logo" width="250px"></span></a>
 
             <!-- Toggler/collapsibe Button -->

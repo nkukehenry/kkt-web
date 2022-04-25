@@ -18,33 +18,34 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>public/admin/css/AdminLTE.min.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>public/admin/css/_all-skins.min.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>public/admin/css/magnific-popup.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>public/admin/css/style.css">
 	
-
-
 	<style>
+
+		:root{
+			--main-color:#028275;
+		}
 		.skin-blue .wrapper,
 		.skin-blue .main-header .logo,
 		.skin-blue .main-header .navbar,
 		.skin-blue .main-sidebar,
 		.content-header .content-header-right a,
 		.content .form-horizontal .btn-success {
-			background-color: #4172a5!important;
+			background-color: var(--main-color)!important;
 		}
 
 		.content-header .content-header-right a,
 		.content .form-horizontal .btn-success {
-			border-color: #4172a5!important;
+			border-color: var(--main-color)!important;
 		}
 		
 		.content-header>h1,
 		.content-header .content-header-left h1,
 		h3 {
-			color: #4172a5!important;
+			color: var(--main-color)!important;
 		}
 
 		.box.box-info {
-			border-top-color: #4172a5!important;
+			border-top-color: var(--main-color)!important;
 		}
 
 		.nav-tabs-custom>.nav-tabs>li.active {
@@ -152,6 +153,18 @@
 			          </a>
 			        </li>
 
+			        <li class="treeview <?php if( ($class_name == 'keyarea') ) {echo 'active';} ?>">
+			          <a href="<?php echo base_url(); ?>admin/keyarea">
+			            <i class="fa fa-cog"></i> <span>Key Areas</span>
+			          </a>
+			        </li>
+
+
+			        <li class="treeview <?php if( ($class_name == 'feature') ) {echo 'active';} ?>">
+			          <a href="<?php echo base_url(); ?>admin/feature">
+			            <i class="fa fa-cube"></i> <span>Feature Points</span>
+			          </a>
+			        </li>
 
 					<li class="treeview <?php if( ($class_name == 'captcha') ) {echo 'active';} ?>">
 						<a href="#">
@@ -217,7 +230,7 @@
 			          <a href="<?php echo base_url(); ?>admin/lang">
 			            <i class="fa fa-language"></i> <span>Language</span>
 			          </a>
-			        </li>
+			        </li> 
 			      
 			        <li class="treeview <?php if( ($class_name == 'category') || ($class_name == 'news') || ($class_name == 'comment') ) {echo 'active';} ?>">
 						<a href="#">
@@ -234,12 +247,12 @@
 						</ul>
 					</li>
 
-					<li class="treeview <?php if( ($class_name == 'event') ) {echo 'active';} ?>">
+					<!-- <li class="treeview <?php if( ($class_name == 'event') ) {echo 'active';} ?>">
 			          <a href="<?php echo base_url(); ?>admin/event">
 			            <i class="fa fa-calendar"></i> <span>Event</span>
 			          </a>
 			        </li>
-
+ -->
 					<li class="treeview <?php if( ($class_name == 'subscriber') ) {echo 'active';} ?>">
 						<a href="#">
 							<i class="fa fa-comment"></i>
@@ -272,7 +285,7 @@
 			          </a>
 			        </li>
 
-			        <li class="treeview <?php if( ($class_name == 'photo') ) {echo 'active';} ?>">
+			        <!-- <li class="treeview <?php if( ($class_name == 'photo') ) {echo 'active';} ?>">
 			          <a href="<?php echo base_url(); ?>admin/photo">
 			            <i class="fa fa-camera"></i> <span>Photo Gallery</span>
 			          </a>
@@ -282,25 +295,25 @@
 			          <a href="<?php echo base_url(); ?>admin/pricing_table">
 			            <i class="fa fa-usd"></i> <span>Pricing Table</span>
 			          </a>
-			        </li>
+			        </li> -->
 
 			        <li class="treeview <?php if( ($class_name == 'portfolio')||($class_name == 'portfolio_category') ) {echo 'active';} ?>">
 						<a href="#">
 							<i class="fa fa-bars"></i>
-							<span>Our Speciality</span>
+							<span>Our Portfolio</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-						<!-- 	<li><a href="<?php echo base_url(); ?>admin/portfolio_category"><i class="fa fa-circle-o"></i> Portfolio Category</a></li> -->
+							<li><a href="<?php echo base_url(); ?>admin/portfolio_category"><i class="fa fa-circle-o"></i> Portfolio Categories</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/portfolio"><i class="fa fa-circle-o"></i> Portfolio</a></li>
 						</ul>
 					</li>
 
 			        <li class="treeview <?php if( ($class_name == 'client') ) {echo 'active';} ?>">
 			          <a href="<?php echo base_url(); ?>admin/client">
-			            <i class="fa fa-clone"></i> <span>Client</span>
+			            <i class="fa fa-clone"></i> <span>Clients</span>
 			          </a>
 			        </li>
 
@@ -310,17 +323,12 @@
 			          </a>
 			        </li>
 
-			        <li class="treeview <?php if( ($class_name == 'feature') ) {echo 'active';} ?>">
-			          <a href="<?php echo base_url(); ?>admin/feature">
-			            <i class="fa fa-cube"></i> <span>Feature</span>
-			          </a>
-			        </li>
 
-			        <li class="treeview <?php if( ($class_name == 'why_choose') ) {echo 'active';} ?>">
+			       <!--  <li class="treeview <?php if( ($class_name == 'why_choose') ) {echo 'active';} ?>">
 			          <a href="<?php echo base_url(); ?>admin/why_choose">
 			            <i class="fa fa-paper-plane-o"></i> <span>Why Choose Us</span>
 			          </a>
-			        </li>
+			        </li> -->
 
 			        <li class="treeview <?php if( ($class_name == 'faq') ) {echo 'active';} ?>">
 			          <a href="<?php echo base_url(); ?>admin/faq">

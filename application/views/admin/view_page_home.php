@@ -82,7 +82,7 @@ if(!$this->session->userdata('id')) {
 
                     <h3 class="sec_title">Welcome Section</h3>
                     <?php echo form_open_multipart(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
-                    <div class="form-group">
+                    <div class="form-group hidden">
                         <label for="" class="col-sm-2 control-label">Video</label>
                         <div class="col-sm-6">
                             <textarea name="home_welcome_video" class="form-control" cols="30" rows="10" style="height:100px;"><?php echo $page_home_lang_independent['home_welcome_video']; ?></textarea>
@@ -108,15 +108,15 @@ if(!$this->session->userdata('id')) {
 
 
 
-                    <h3 class="sec_title">Welcome Section (Video Background)</h3>
+                    <h3 class="sec_title">Welcome Section</h3>
                     <?php echo form_open_multipart(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
                         <div class="form-group">
-                            <label for="" class="col-sm-2 control-label">Existing Video Background</label>
+                            <label for="" class="col-sm-2 control-label">Image</label>
                             <div class="col-sm-6" style="padding-top:6px;">
                                 <img src="<?php echo base_url(); ?>public/uploads/<?php echo $page_home_lang_independent['home_welcome_video_bg']; ?>" class="existing-photo" style="height:180px;">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group ">
                             <label for="" class="col-sm-2 control-label">Video Background </label>
                             <div class="col-sm-6" style="padding-top:5px;">
                                 <input type="file" name="home_welcome_video_bg">
@@ -198,8 +198,8 @@ if(!$this->session->userdata('id')) {
 
 
 
-                    <h3 class="sec_title">Counter Information Section</h3>
-                    <?php echo form_open(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
+                    <h3 class="sec_title hidden">Counter Information Section</h3>
+                    <?php echo form_open(base_url().'admin/page-home/update',array('class' => 'form-horizontal hidden')); ?>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">Show on Home? </label>
                             <div class="col-sm-2">
@@ -219,8 +219,8 @@ if(!$this->session->userdata('id')) {
 
 
 
-                    <h3 class="sec_title">Counter Photo Section</h3>
-                    <?php echo form_open_multipart(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
+                    <h3 class="sec_title hidden">Counter Photo Section</h3>
+                    <?php echo form_open_multipart(base_url().'admin/page-home/update',array('class' => 'form-horizontal hidden')); ?>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">Existing Counter Background</label>
                             <div class="col-sm-6" style="padding-top:6px;">
@@ -264,8 +264,8 @@ if(!$this->session->userdata('id')) {
                     <?php echo form_close(); ?>
 
 
-                    <h3 class="sec_title">Booking Section</h3>
-                    <?php echo form_open(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
+                    <h3 class="sec_title hidden">Booking Section</h3>
+                    <?php echo form_open(base_url().'admin/page-home/update',array('class' => 'form-horizontal hidden')); ?>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">Show on Home? </label>
                             <div class="col-sm-2">
@@ -285,8 +285,8 @@ if(!$this->session->userdata('id')) {
                     <?php echo form_close(); ?>
 
 
-                    <h3 class="sec_title">Booking Photo Section</h3>
-                    <?php echo form_open_multipart(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
+                    <h3 class="sec_title hidden">Booking Photo Section</h3>
+                    <?php echo form_open_multipart(base_url().'admin/page-home/update',array('class' => 'form-horizontal hidden')); ?>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">Existing Booking Background</label>
                             <div class="col-sm-6" style="padding-top:6px;">
@@ -330,8 +330,8 @@ if(!$this->session->userdata('id')) {
                     <?php echo form_close(); ?>
 
 
-                    <h3 class="sec_title">Pricing Table Section</h3>
-                    <?php echo form_open(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
+                    <h3 class="sec_title hidden">Pricing Table Section</h3>
+                    <?php echo form_open(base_url().'admin/page-home/update',array('class' => 'form-horizontal hidden')); ?>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">Show on Home? </label>
                             <div class="col-sm-2">
@@ -394,7 +394,7 @@ if(!$this->session->userdata('id')) {
                     <?php echo form_close(); ?>
 
 
-                    <h3 class="sec_title">Blog Section</h3>
+                    <h3 class="sec_title">News Section</h3>
                     <?php echo form_open(base_url().'admin/page-home/update',array('class' => 'form-horizontal')); ?>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">How many item to show? </label>

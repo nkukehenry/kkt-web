@@ -12,16 +12,15 @@ class Portfolio extends MY_Controller {
 
 	public function index()
 	{
-		$data['setting'] = $this->Model_common->all_setting();
+		$data['setting']   = $this->Model_common->all_setting();
 		$data['page_home'] = $this->Model_common->all_page_home();
 		$data['page_portfolio'] = $this->Model_common->all_page_portfolio();
-		$data['comment'] = $this->Model_common->all_comment();
-		$data['social'] = $this->Model_common->all_social();
+		$data['comment']  = $this->Model_common->all_comment();
+		$data['social']   = $this->Model_common->all_social();
 		$data['all_news'] = $this->Model_common->all_news();
 
 		$data['portfolio_category'] = $this->Model_portfolio->get_portfolio_category();
-		$data['portfolio'] = $this->Model_portfolio->get_portfolio_data();
-
+		$data['portfolio']          = $this->Model_portfolio->get_portfolio_data();
 		$data['portfolio_footer'] = $this->Model_portfolio->get_portfolio_data();
 
 		$data['check_captcha'] = $this->Model_portfolio->check_captcha();
@@ -34,11 +33,11 @@ class Portfolio extends MY_Controller {
 
 	public function view($id)
 	{
-		$data['setting'] = $this->Model_common->all_setting();
+		$data['setting']   = $this->Model_common->all_setting();
 		$data['page_home'] = $this->Model_common->all_page_home();
 		$data['page_portfolio'] = $this->Model_common->all_page_portfolio();
-		$data['comment'] = $this->Model_common->all_comment();
-		$data['social'] = $this->Model_common->all_social();
+		$data['comment']  = $this->Model_common->all_comment();
+		$data['social']   = $this->Model_common->all_social();
 		$data['all_news'] = $this->Model_common->all_news();
 
 		$data['portfolio_order_by_name'] = $this->Model_portfolio->get_portfolio_data_order_by_name();

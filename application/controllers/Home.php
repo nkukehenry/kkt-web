@@ -10,6 +10,7 @@ class Home extends MY_Controller {
         $this->load->model('Model_home');
         $this->load->model('Model_portfolio');
         $this->load->model('Model_news');
+        $this->load->model('Model_keyareas');
     }
 
 	public function index()
@@ -31,10 +32,13 @@ class Home extends MY_Controller {
 		$data['clients'] = $this->Model_home->all_client();
 		$data['pricing_table'] = $this->Model_home->all_pricing_table();
 		$data['home_faq'] = $this->Model_home->all_faq_home();
-		
+
 		$data['portfolio_category'] = $this->Model_portfolio->get_portfolio_category();
 		$data['portfolio']          = $this->Model_portfolio->get_portfolio_data();
+
 		$data['portfolio_footer'] = $this->Model_portfolio->get_portfolio_data();
+
+		$data['keyareas']   = $this->Model_keyareas->get_keyareas();
 
 		$this->load->view('view_header',$data);
 		$this->load->view('view_home',$data);

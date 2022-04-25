@@ -40,6 +40,7 @@ style="background: url(<?php echo base_url(); ?>public/uploads/<?php echo $setti
                 <div class="comment-form headstyle mt_50">
                     <h4><?php echo SHARE_THIS_NEWS; ?></h4>
                     <?php $url = base_url().'news/view/'.$news_detail['news_id']; ?>
+                    <br/>
                     <div class="btn-group">
                         <a class="btn" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php echo $url; ?>&t=<?php echo $news_detail['news_title']; ?>"><i class="fa fa-facebook-f"></i></a>
 
