@@ -344,7 +344,8 @@ if(count($clients)>0): ?>
                     foreach($clients as $row) {
                         ?>
                         <?php if($row['url']!=''): ?>
-                            <div class="brand-item"><a href="<?php echo $row['url']; ?>"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>"></a></div>
+                            <div class="brand-item">
+                                <a href="<?php echo $row['url']; ?>"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>"></a></div>
                         <?php else: ?>
                             <div class="brand-item"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>"></div>
                         <?php endif; ?>

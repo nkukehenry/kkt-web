@@ -150,7 +150,7 @@
 		autoplaySpeed: 1500,
 		smartSpeed: 1500,
 		margin: 10,
-		nav: true,
+		nav: false,
 		navText: ["<i class='fa fa-caret-left'></i>", "<i class='fa fa-caret-right'></i>"],
 		responsive: {
 			4: {

@@ -3440,8 +3440,22 @@ Brand
 -------------------------------
 */
 
+.brand-item{
+	display: flex;
+	background-color: #fff;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px!important;
+	max-height: 100px!important;
+	padding:50px;
+	border-radius: 8px;
+	box-shadow: 1px 1px 50px 1px #eee;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .brand-item img {
-	max-width: 100%;
+	max-width: 80px;
 	height: auto;
 }
 
